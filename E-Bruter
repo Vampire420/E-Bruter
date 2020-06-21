@@ -1,0 +1,93 @@
+#!/bin/bash
+#   <=: INFO :=>
+# Author: James Rock
+# Facebook: www.facebook.com/Wicked.W0lf
+# ! FOR ETHICAL PURPOSES ONLY !
+# For absolute beginners
+
+#BARVY
+
+red="\033[1;31m"
+green="\033[1;32m"
+blue="\033[1;34m"
+white="\033[97m"
+nc="\e[0m"
+
+#CHECKING
+
+chmod +x languages/*
+if [ "$EUID" -ne 0 ] && [ "$OSTYPE" = "linux-gnu"* ]; then
+  echo -e " \033[7;31m Run this as root! $nc"
+  exit 1
+ else
+  wget -q --spider http://google.com
+  if [ $? -eq 0 ]; then
+    apt install hydra -y
+  else
+    echo -e " \033[7;31m You are offline! $nc"
+    exit 1
+ fi
+fi
+
+#BANNER
+clear
+echo -e "\n\n$red	███████╗$nc       $green██████╗ ██████╗ ██╗   ██╗████████╗███████╗██████╗ "
+echo -e "$red 	██╔════╝$nc       $green██╔══██╗██╔══██╗██║   ██║╚══██╔══╝██╔════╝██╔══██╗"
+echo -e "$red 	█████╗  $nc$blue█████╗$nc $green██████╔╝██████╔╝██║   ██║   ██║   █████╗  ██████╔╝"
+echo -e "$red 	██╔══╝  $nc$blue╚════╝$nc $green██╔══██╗██╔══██╗██║   ██║   ██║   ██╔══╝  ██╔══██╗"
+echo -e "$red 	███████╗$nc       $green██████╔╝██║  ██║╚██████╔╝   ██║   ███████╗██║  ██║"
+echo -e "$red	╚══════╝$nc       $green╚═════╝ ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝"
+echo -e "\n                                              $white Simple$red Email$blue-"$green"Bruteforcing$white tool"
+
+#Languages/Jazyky
+
+echo -e "\n"
+echo -e "                            $blue <=: Vyber si jazyk :=> $nc"
+echo -e "                         $blue <=: Choose the language :=> $nc"
+
+echo ""
+echo -e "$green   	             ΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞ"
+echo -e "                     Ξ                                   Ξ"
+echo -e "                     Ξ   $red 1$green : $white[$blue>$red-$white]$green CZ	$red 2$green : $white[$blue*$red=$white]$green EN	$nc$green Ξ"
+echo -e "                     Ξ                                   Ξ"
+echo -e "                     ΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞ"
+echo -e "\n $green"
+read -p " Vybrat | Choose : " lang
+
+clear
+echo -e "\n\n$red	███████╗$nc       $green██████╗ ██████╗ ██╗   ██╗████████╗███████╗██████╗ "
+echo -e "$red 	██╔════╝$nc       $green██╔══██╗██╔══██╗██║   ██║╚══██╔══╝██╔════╝██╔══██╗"
+echo -e "$red 	█████╗  $nc$blue█████╗$nc $green██████╔╝██████╔╝██║   ██║   ██║   █████╗  ██████╔╝"
+echo -e "$red 	██╔══╝  $nc$blue╚════╝$nc $green██╔══██╗██╔══██╗██║   ██║   ██║   ██╔══╝  ██╔══██╗"
+echo -e "$red 	███████╗$nc       $green██████╔╝██║  ██║╚██████╔╝   ██║   ███████╗██║  ██║"
+echo -e "$red	╚══════╝$nc       $green╚═════╝ ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝"
+echo -e "\n                                              $white Simple$red Email$blue-"$green"Bruteforcing$white tool"
+
+#SMTP-MENUs
+
+echo -e "\n"
+echo -e "                            $blue <=: Vyber si menu :=> $nc"
+echo -e "                           $blue <=: Choose the menu :=> $nc"
+
+echo ""
+echo -e "$green   	             ΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞ"
+echo -e "                     Ξ                                 Ξ"
+echo -e "                     Ξ    "$red"1$green :$white World SMTP providers     "$green"Ξ"
+echo -e "                     Ξ                                 Ξ"
+echo -e "                     Ξ    "$red"2$green :$white Czech SMTP providers     "$green"Ξ"
+echo -e "                     Ξ                                 Ξ"
+echo -e "                     ΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞ"
+echo -e "\n $green"
+read -p " Vybrat | Choose : " menu
+
+if [ $lang = 1 ] && [ $menu = 1 ]; then
+  cd languages ; ./E-bruter-EN_cz.sh
+elif [ $lang = 1 ] && [ $menu = 2 ]; then
+  cd languages ; ./E-bruter-CZ_cz.sh
+elif [ $lang = 2 ] && [ $menu = 1 ]; then
+  cd languages ; ./E-bruter-EN_en.sh
+elif [ $lang = 2 ] && [ $menu = 2 ]; then
+  cd languages ; ./E-bruter-CZ_en.sh
+else
+  echo -e " \033[7;31m WRONG INPUT! $nc"
+fi
