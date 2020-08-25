@@ -1,6 +1,6 @@
 # E-Bruter
 # Author: James Rock
-# Contact: vampire420@protonmail.com
+# Contact: WickedW0LF@protonmail.com
 # This tool is for EDUCATION PURPOSES ONLY !
 # Do not use for illegal purposes :)
 
