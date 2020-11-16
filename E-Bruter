@@ -52,7 +52,7 @@ echo -e "                     Ξ   $red 1$green : $white[$blue>$red-$white]$gree
 echo -e "                     Ξ                                   Ξ"
 echo -e "                     ΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞ"
 echo -e "\n $green"
-read -p " Vybrat | Choose : " lang
+read -e -p " Vybrat | Choose : " lang
 
 clear
 echo -e "\n\n$red	███████╗$nc       $green██████╗ ██████╗ ██╗   ██╗████████╗███████╗██████╗ "
@@ -78,7 +78,7 @@ echo -e "                     Ξ    "$red"2$green :$white Czech SMTP providers  
 echo -e "                     Ξ                                 Ξ"
 echo -e "                     ΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞΞ"
 echo -e "\n $green"
-read -p " Vybrat | Choose : " menu
+read -e -p " Vybrat | Choose : " menu
 
 if [ $lang = 1 ] && [ $menu = 1 ]; then
   cd languages ; ./E-bruter-EN_cz.sh
