@@ -9,6 +9,7 @@
 
 red="\033[1;31m"
 green="\033[1;32m"
+on_green="\033[0;30m \033[42m"
 blue="\033[1;34m"
 white="\033[97m"
 nc="\e[0m"
@@ -38,6 +39,8 @@ echo -e "$red 	██╔══╝  $nc$blue╚════╝$nc $green██╔
 echo -e "$red 	███████╗$nc       $green██████╔╝██║  ██║╚██████╔╝   ██║   ███████╗██║  ██║"
 echo -e "$red	╚══════╝$nc       $green╚═════╝ ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝"
 echo -e "\n                                              $white Simple$red Email$blue-"$green"Bruteforcing$white tool"
+echo -e "               "$light_grey"Author$light_red :$on_green W1ckedW0LF $nc\n"
+echo -e "               "$light_grey"Author$red :$on_green W1ckedW0LF $nc\n"
 
 #Languages/Jazyky
 
